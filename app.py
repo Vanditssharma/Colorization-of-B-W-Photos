@@ -29,6 +29,7 @@ def predict():
     '''
     For rendering results on HTML GUI
     '''
+    os.makedirs("/images", exist_ok=False)
     imagefile= request.files['imagefile'] 
     image_path = "images/" + imagefile.filename
     imagefile.save(image_path)
